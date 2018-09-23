@@ -15,7 +15,7 @@ describe('POST /api/user', () => {
   })
 
   // integration test should not drive the business logic (i.e. - testing different reports and that logic), it should test that intergation works
-  it('should respond with 200 if user account created successfully', async () => {
+  it('should respond with 201 if user account created successfully', async () => {
     await request(app)
       .post('/api/user')
       .send({user_name: "ccleary00", user_type: "admin"})
